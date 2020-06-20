@@ -1,0 +1,38 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appContent {
+  overflow-y: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.appHeader {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 1px 4px var(--gray);
+  padding: 10px 20px;
+  flex-shrink: 0;
+}
+
+.appHeader > h1 {
+  display: inline-block;
+  margin: 0;
+  flex: 1;
+}
+
+.listHeader {
+  list-style: none;
+}
+
+.searchMessage {
+  margin: 30vh auto;
+  width: fit-content;
+  display: block;
+  font-size: large;
+}

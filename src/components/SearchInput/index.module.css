@@ -1,0 +1,32 @@
+.searchContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.search {
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  height: 24px;
+  text-indent: 18px;
+  caret-color: var(--gray);
+}
+
+.search:focus {
+  outline: 1px solid var(--gray);
+}
+
+.icon {
+  position: absolute;
+  width: 14px;
+  color: var(--gray);
+  left: 3px;
+  top: 3px;
+}
+
+@media only screen and (max-width: 500px) {
+  .searchContainer {
+    order: 2;
+    flex-basis: 100%;
+    margin-top: 10px;
+  }
+}

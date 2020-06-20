@@ -1,0 +1,83 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gridList {
+  padding: 10px 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  grid-auto-flow: dense;
+}
+
+.filterList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  box-shadow: 0 1px 4px var(--gray);
+  z-index: 1;
+}
+
+.filter {
+  position: relative;
+  background: white;
+  margin: 8px 5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px var(--gray);
+  user-select: none;
+}
+
+.selectedFilter {
+  box-shadow: inset 1px 1px 4px var(--gray);
+}
+
+.filter:active {
+  box-shadow: inset 2px 2px 4px var(--gray);
+}
+
+.filter:hover {
+  cursor: pointer;
+}
+
+.selectedFilter:active {
+  box-shadow: inset 2px 2px 4px var(--gray);
+}
+
+.filter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+
+  box-shadow: 3px 3px 4px var(--gray);
+
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.selectedFilter::before {
+  box-shadow: none;
+}
+
+.filter:hover::before {
+  opacity: 1;
+}
+.filter:active::before {
+  box-shadow: none;
+}
+
+.scrollingDiv {
+  overflow-y: auto;
+}
+
+@media all and (max-width: 320px) {
+  .gridList {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
