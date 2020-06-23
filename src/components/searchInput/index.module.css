@@ -12,15 +12,17 @@
 }
 
 .search:focus {
-  outline: 1px solid var(--gray);
+  outline: none;
 }
 
 .icon {
   position: absolute;
   width: 14px;
   color: var(--gray);
-  left: 3px;
-  top: 3px;
+  left: 4px;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media only screen and (max-width: 500px) {
