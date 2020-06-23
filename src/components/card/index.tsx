@@ -12,7 +12,7 @@ type CardProps = {
 export default class Card extends Component<CardProps> {
   render() {
     const {
-      exercise: { id, title, description, muscles, equipment, images },
+      exercise: { id, title, type, description, muscles, equipment, images },
       shouldShowInfo,
       onClick,
     } = this.props;
@@ -24,6 +24,7 @@ export default class Card extends Component<CardProps> {
           onClick={() => onClick(id)}
         >
           <h3>{title}</h3>
+          <div className={styles.exerciseType}>{type}</div>
           <p>{description}</p>
           <div className={styles.lists}>
             <div>
